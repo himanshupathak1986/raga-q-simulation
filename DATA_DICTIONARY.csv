@@ -1,0 +1,37 @@
+column,units,description
+synthetic,boolean,Always true; all observations are simulated.
+seed,integer,NumPy generator seed identifying a complete simulation run.
+scenario,category,"aligned, no_signal, or shifted; see README and generation equations."
+project_id,identifier,Fictional project ID; independent grouping unit for bootstrap.
+task_id,identifier,Fictional task nested within project; six candidates per task.
+candidate_id,identifier,"Unique within seed and scenario, not across repeated runs."
+split,category,"development, calibration, or test; assigned at project level."
+category,category,"Balanced synthetic tag: functional, quality, security or privacy."
+generator_proxy,category,Fictional Proxy_A/B/C; no actual LLM execution.
+repeat,integer,0 or 1; repeat per fictional generator/task.
+valid,binary,"Simulated applicability/build validity, 1 eligible for policy analysis."
+S,"[0,1]",Simulated security-exposure feature.
+P,"[0,1]",Simulated privacy-exposure feature.
+B,"[0,1]",Simulated dependency/blast-radius feature.
+C,"{0,0.5,1}",Simulated component criticality.
+T,"[0,1]",Simulated bounded-probe inadequacy feature; no real mutants executed.
+override,binary,Force T4 when S>0.82 or P>0.82 or C=1.
+U,binary,"Simulated unsafe-outcome label, sampled from prob_U."
+Q,binary,"Simulated severe-quality label, sampled from prob_Q."
+D,binary,Union of U and Q.
+detect_u_draw,"[0,1]",Shared uniform draw used against assumed unsafe-detection sensitivities.
+detect_q_draw,"[0,1]",Shared uniform draw used against assumed quality-detection sensitivities.
+false_reject_draw,"[0,1]",Shared uniform draw for false rejection among D=0.
+unavailable_draw,"[0,1]",T4 review-unavailability draw; values below 0.02 defer unless already rejected.
+cost_multiplier,unitless,Lognormal factor multiplying assumed package costs; not observed runtime.
+latent_structure,"[0,1]",Simulator-only structural latent variable; never fed directly to fitted policy.
+latent_hidden,real,Unobserved simulator risk including project/task effects; not a model input.
+prob_U,"[0,1]",Simulator-only probability of unsafe outcome; not a model input.
+prob_Q,"[0,1]",Simulator-only probability of severe-quality outcome; not a model input.
+z_cc,"[0,1]",Noisy structural proxy named after cyclomatic degradation; not a Java metric.
+z_cognitive,"[0,1]",Noisy structural proxy named after cognitive complexity degradation.
+z_size,"[0,1]",Noisy structural size proxy; not measured changed LOC.
+z_mi,"[0,1]",Noisy proxy for worsening maintainability; MI formula is not executed.
+z_nesting,"[0,1]",Noisy proxy for increased nesting.
+AQRI,"[0,1]",Weighted structural proxy score fitted on valid development data; blank for invalid rows.
+score,"[0,1]",Constrained logistic predicted synthetic adverse risk; blank for invalid rows.

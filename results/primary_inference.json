@@ -1,0 +1,23 @@
+{
+  "groups": 9,
+  "reps": 5000,
+  "risk_difference_ci95": [
+    0.0,
+    0.0
+  ],
+  "risk_difference_upper95": 0.0,
+  "coverage_difference_ci95": [
+    0.0,
+    0.0
+  ],
+  "cost_saving_ci95": [
+    -0.03202100843649823,
+    -0.02971691734940053
+  ],
+  "numerical_margin_rule_passes": true,
+  "identical_acceptance_decisions": true,
+  "noninferiority_established": false,
+  "warning": "Percentile project-cluster bootstrap is descriptive with only nine projects; no real-world noninferiority claim.",
+  "auroc": 0.6413618587531631,
+  "ap": 0.47688895499543654
+}

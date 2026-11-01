@@ -1,0 +1,51 @@
+{
+  "fresh_rerun_repetitions": 30,
+  "scenarios": 3,
+  "all_checked_files_identical": true,
+  "checks": [
+    {
+      "file": "data/synthetic_all_scenarios.csv",
+      "identical": true
+    },
+    {
+      "file": "data/synthetic_primary.csv",
+      "identical": true
+    },
+    {
+      "file": "results/checksums.json",
+      "identical": true
+    },
+    {
+      "file": "results/fitted_parameters.json",
+      "identical": true
+    },
+    {
+      "file": "results/primary_decisions.csv",
+      "identical": true
+    },
+    {
+      "file": "results/primary_inference.json",
+      "identical": true
+    },
+    {
+      "file": "results/primary_policy_results.csv",
+      "identical": true
+    },
+    {
+      "file": "results/primary_sensitivity_curve.csv",
+      "identical": true
+    },
+    {
+      "file": "results/repetition_results.csv",
+      "identical": true
+    },
+    {
+      "file": "results/scenario_summary.csv",
+      "identical": true
+    },
+    {
+      "file": "results/validation.json",
+      "identical": true
+    }
+  ]
+}

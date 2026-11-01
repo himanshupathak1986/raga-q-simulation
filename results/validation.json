@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "primary_attempts": 720,
+  "total_synthetic_rows": 64800,
+  "paired_candidates": 242,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  }
+}
